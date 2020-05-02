@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+
+	<style >
+		.head{
+
+			border-radius: 25px 25px 0px 0px;
+			text-align: center;
+			background: grey;
+			border: 1px solid black;
+			color: darkgreen;
+			font-family: arial;
+			
+
+
+		}/* to set background image on any element*/
+		.head{
+			background-image: url('photos/1 (62).jpg');/* background pic*/
+			background-size: 40px 40px; /* height and width of the image*/
+			background-position: top left;/*initia psoition to be set up*/
+			background-repeat: repeat;/* whether we want to repeat that image or not*/
+		}
+		nav ul{
+		
+			list-style: none;
+			margin: 0px;
+			padding: 12px;
+			background: linear-gradient(black, white);
+			color: white;
+		}
+		*{
+			box-sizing: border-box;
+		}
+
+		:root {
+			--main-color:grey;/* root alz begin with-- and ended with the property we want to change*/
+			--main-text:arial;
+			--main-text-color:white;/*this will change the color of the whole text represented below*/
+			--main-padding: 10px;
+		}
+
+		.A, .C{
+			float: left;
+			width: 25%;
+			font-family: var(--main-text);
+			height: 430px;
+			background: var(--main-color);/* whateever we change in the main root the color will change for A and C*/
+			color: var(--main-text-color);
+			border:1px solid black;
+			padding: var(--main-padding);
+
+		}
+		.B{
+			background-color: var(--main-color);
+			float: left;
+			width: 50%;
+			height: 430px;
+			animation-name: exampl;/*emapl is the name of the animation*/
+			animation-duration: 5s;/*time upto which change can be seen*/
+			animation-delay: 2s;/*animation will start 2s later */
+			animation-iteration-count: 3;/* iteration will be repeated upto 3 times*/
+			animation-direction: alternate;/* background will be changes upto 3 times in froth and backward direction*/
+			animation-timing-function: ease-out;/* background will end slowly*/
+			color:var(--main-text-color);
+			padding: var(--main-padding);
+
+
+		}
+		@keyframes exampl{
+			from{ background-color: skyblue; }
+			to{background-color: tomato;}
+		}
+		
+
+		.foot{
+			text-align: center;
+			background-color: darkgreen;
+			border: none;
+			color: white;
+
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<header class="head"><h1>Welcome to layout</h1></header>
+	<nav>
+		<ul><li>Home</li>
+			<li>Galley</li>
+			<li>About</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+	<div class="hero">
+	<div class="A">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="B">
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="C">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+    </div>
+
+	<div class="foot"><footer>sandeep@2020</footer><div></div>
+
+
+</body>
+</html>

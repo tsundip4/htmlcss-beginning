@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gridlaout</title>
+	<style type="text/css">
+		.head{
+			display: grid;
+			background-color: grey;
+			grid-template-columns: 1fr 1fr 1fr;/* three column of equal fraction will be build up*/
+			grid-template-rows: 60px 120px 100px 100px;/* four rows of different size are made*/
+			grid-gap: 5px;
+			padding: 5px;
+		}
+
+		.first{
+			background-color: tomato;
+			text-align: center;
+
+		}
+		.one{
+		grid-column: 1/4;/* first element will e start form line one and end with line 4*/
+		background-color: skyblue;
+
+
+		}
+
+		.two{
+
+			grid-column: 1/4;
+			background-color: lightgreen;
+
+		}
+		.third{
+			grid-column: 1;
+			grid-row: 3/6;
+			background-color: pink;
+		}
+
+		.fourth{
+			grid-row: 3;
+			grid-column: 2/4;/* row 3 and span the column from 2 to 4*/
+			background-color: blue;
+		}
+		.fifth{
+			grid-row: 4;
+			grid-column: 2/4;/* span the grid column from column 2 to 4*/
+			background-color: brown;
+		}
+
+		.sixth{
+			grid-row: 5;/* row five */
+			grid-column: 2;/*column 2*/
+			background-color: yellow;
+		}
+ 		.seventh{
+			grid-row: 5;
+			grid-column: 3;
+			background-color: indigo;
+		}
+
+
+		.newhead{
+			display: grid;
+			grid-template-columns: 25% 50% 22%;
+			grid-template-rows: 60px 300px 80px;
+			grid-auto-rows: minmax(60px, auto);
+			grid-gap: 2px 3px;
+
+		}
+		.header{
+			grid-row: 1;
+			grid-column: 1/4;
+			font-size: 30px;
+			color: white;
+			background-color: darkgrey;
+			text-align: center;
+		}
+		.bottom{
+			
+			grid-row: 3;
+			grid-column: 1/4;
+			background-color: skyblue;
+			font-size: 20px;
+			color: white;
+			text-align: center;
+		}
+		.left{
+			background-color: lightgreen;
+			font-size: 25px;
+			text-align: center;
+		}
+		.center{
+			background-color: pink;
+			font-size: 20px;
+			text-align: center;
+		}
+		.right{
+			background-color: darkgreen;
+			font-size: 25px;
+			text-align: center;
+		}
+		.bottomp{
+			width: 150px;
+			background-color: tomato;
+			color: white;
+			font-size: 15px;
+			padding: 10px;
+			float: left;
+			margin-top:17px;
+			margin-bottom: 10px;
+			margin-right: 70px;
+			margin-left: 10px;
+			border:1px solid green;
+			
+
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="first one">A</div>
+		<div class="first two">B</div>
+		<div class="first third">C</div>
+		<div class="first fourth">D</div>
+		<div class="first fifth">E</div>
+		<div class="first sixth" style="height: 100px;">F</div>
+		<div class="first seventh">G</div>
+		
+		
+		
+	</div><br><br><br>
+
+	<div class="newhead">
+		<div class="header">Header</div>
+		<div class="left">Left</div>
+		<div class="center">center</div>
+		<div class="right">Right</div>
+		<div class="bottom perfect">
+			<div class="bottomp one">one</div>
+			<div class="bottomp two">two</div>
+			<div class="bottomp three">three</div>
+			<div class="bottomp four">four</div>
+			<div class="bottomp five">five</div>
+		</div>
+		
+	</div>
+
+
+
+</body>
+</html>

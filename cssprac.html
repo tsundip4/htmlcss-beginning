@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css prac from w3 school</title>
+	<style type="text/css">
+		img{
+			float: right;/*this will place the image to the right*/
+		}
+
+		.ab{
+			clear: right; /*class ab will not appear to the element floated right and it appear below it*/
+		}
+
+		.ab1{
+			border: 10px solid black;
+			overflow:auto;/*adding overflow auto will make picture inside the same class*/
+			padding: 5px;
+			width:800px;
+			box-sizing: content-box;/*with these property even if we add different feature such as padding margin the width of box never changes*/
+
+		}
+		.ab::before{ 
+			content: "Hello";/*contenet that will appear before the div class ab*/
+			border: 2px solid green;
+			display: block;/*appear in a new line*/
+			background-color: green;
+			padding: 12px;
+			margin: 1px;
+		}
+		@media screen and (max-width: 900px){/*when the screen is 900 or less it will change in the following form*/
+			body{
+				background-color: grey;
+				color: blue;
+			}
+		}
+
+		.tala{
+			position: relative;
+			display: inline-block;
+
+		}
+		/*when the ouse is over the text we display .des class in this way*/
+		.des{
+			display: none;
+			position: absolute;
+			min-width: 160px;
+			box-shadow: 0px 5px 8px 0px;
+			padding: 16px 12px;
+			z-index: 1;/*text will be seen above the other text and if -1 behind the text*/
+			background-color: skyblue;
+
+
+		}
+		/* this will display when we take the mouse to the respective text*/
+		.tala:hover .des{
+			display: block;
+		}
+		.sano-photo{
+			position: relative;
+			display: inline-block;
+		}
+		.thulo-photo{
+			display: none;
+			position: absolute;
+			background-color: lightgreen;
+			box-shadow: 0px 8px 12px 0px;
+			z-index: 1;
+
+		}
+		.sano-photo:hover .thulo-photo{
+			display: block;
+		}
+		.describe{
+		
+            text-align: center;
+
+		}
+		.image1{
+			
+			margin: 10px;
+			border: 1px solid grey;
+			float: left;
+			width: 200px;
+			padding: 5px;
+			border-radius: 4px;
+
+			
+		}
+
+		.image1:hover{
+			box-shadow: 1px 2px 1px 1px;
+		}
+		.image1 img{
+			
+			width: 100%;
+			height: auto;
+
+		}
+		
+		
+		.des{
+			text-align: center;
+			padding: 15px;
+			}
+		
+		.css-2d{
+			background-color: grey;
+			width: 150px;
+			border: 1px solid black;
+			transition: width 2s, height 2s;
+			clear: both;
+		}
+		.css-2d:hover{
+			width: 220px;
+			height: 50px;
+			background-color: red;
+
+		}
+
+		.trans{
+			width: 120px;
+			height: 25px;
+			background-color: skyblue;
+			transition: width 2s, height 2s, transform 2s;
+			text-align: center;
+		}
+
+		.trans:hover{
+			height: 50px;
+			width: 180px;
+			transform: rotate(360deg);/*this will rotate the given element for 360 degree*/
+			
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="tala">
+	<span>sandeep bashyal</span>
+	<div class="des">
+		<p>hello this is sandeep</p>
+	</div>
+
+</div>
+
+<div class="sano-photo">
+	<img src="photos/1 (62).jpg" height="100px" width="100px">
+	<div class="thulo-photo">
+		<img src="photos/1 (62).jpg" height="300px" width="300px">
+		<div class="describe">sundar phulharu</div>
+	</div>
+</div>
+
+<p class="A">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+</p>
+	
+<div class="first">
+	<div class="ab1"><img class="image" src="photos/1 (78).jpg" height="250px" width="250px"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+	<div class="ab">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+
+	<div class="image1">
+		<a href="photos/18740374_10155818838775110_4887470281272517281_n.jpg"><img src="photos/18740374_10155818838775110_4887470281272517281_n.jpg" height="400px" width="400px"></a>
+	
+    </div>
+
+		
+	<div class="image1">
+		<a href="photos/18740374_10155818838775110_4887470281272517281_n.jpg"><img src="photos/18740374_10155818838775110_4887470281272517281_n.jpg" height="400px" width="400px"></a>
+		
+ 	</div>
+
+
+
+ 	<h2 class="css-2d">css 2d section</h2>
+
+ 	<div class="trans">
+
+<h2>this is css</h2>
+</div>
+
+
+ 
+
+
+	
+	
+
+
+    
+
+
+
+
+	
+
+
+
+</body>
+</html>

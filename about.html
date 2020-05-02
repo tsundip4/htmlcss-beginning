@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About</title>
+	<nav>
+			<a id="Home" href="index.html">Home</a>
+			<a id="about" href="about.html">About</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="contact.html">Contact</a>
+
+		</nav>
+	<style type="text/css">
+
+		
+
+		.B{
+			background-color: skyblue;
+			color: white;
+			text-decoration: underline;
+			word-spacing: 2px;
+		}
+
+		p::first-line{
+			color: green;/*this will chane the color of first line of paragraph to green*/
+			font-family: arial;
+			font-size: 17px;
+
+		}
+		.image{
+			width: 24%;
+			margin: 5px;
+			float: left;
+			border: 1px solid grey;
+		}
+
+		.image:hover{
+			border: 1px solid black;
+			transform: scaleX(-1);/* this will flip the image similarly scaly flip the picture downward*/
+		}
+		.image img{
+			width: 100%;
+			height: auto;
+		
+		}
+		.desc{
+			text-align: center;
+			padding: 15px;
+		}
+
+		
+		@media only screen and (max-width: 550px){/*when the screen  is less than 550px then single image will appear on the screen*/
+			.image{
+				width: 100%;
+				margin: 0px;
+				border-radius: 50%;
+			}
+			body{
+				background-color: blue;
+			}
+		}
+		
+		.image{
+			box-shadow: 5px 5px 10px grey;
+		}
+ 			
+ 		.size{
+ 			height: 350px;
+ 			width: 200px;
+ 		
+ 		}
+
+		.size1{
+			
+ 			height: 350px;
+ 			width: 200px;
+ 			object-fit: cover;
+
+ 		}
+		
+ 		
+
+
+	</style>
+</head>
+           
+
+<body>
+	
+<p class="B">
+Definition - What does Web Development mean?<br>
+Web development broadly refers to the tasks associated with developing websites for hosting via intranet or internet. The web development process includes web design, web content development, client-side/server-side scripting and network security configuration, among other tasks.
+
+Web development is also known as website development.</p><br><br>
+
+
+<div class="image">
+	<a href="photos/IMG_20170715_093107.jpg"><img src="photos/IMG_20170715_093107.jpg" height="350px" width="350px"></a>
+	<div class="desc">This is my pic</div>
+</div>
+<div class="image">
+	<img src="photos/IMG_20170715_093107.jpg" height="350px" width="350px">
+	<div class="desc">This is my pic</div>
+</div>
+<div class="image">
+	<img src="photos/IMG_20170715_093107.jpg" height="350px" width="350px">
+	<div class="desc">This is my pic</div>
+</div>
+<div class="image">
+	<img src="photos/IMG_20170715_093107.jpg" height="350px" width="350px">
+	<div class="desc">This is my pic</div>
+</div>
+
+
+<h3>picture resize</h3>
+
+<div class="in">
+<p>without object-fit</p>
+<img  class="size" src="photos/IMG_20170715_093107.jpg" height="350px" width="350px">
+
+<p>with object-fit</p>
+<img  class="size1" src="photos/IMG_20170715_093107.jpg" height="350px" width="350px">
+</div>
+
+
+
+
+
+
+</body>
+</html>

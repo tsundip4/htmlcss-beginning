@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex.com</title>
+	<style type="text/css">
+		.main{
+			display: flex;/* display will be seen in flex*/
+			
+			flex-wrap: wrap;/*flex items will be wrap*/
+			background-color: grey;/*background color for flex board*/
+			justify-content: center;/*this will align the flex item to the center*/
+			justify-content: space-between;/*this will create the space beteen the items*/
+			align-items: flex-start;
+		}
+		div .sub{
+			width: 100px;
+			margin: 10px;
+			padding: 20px;
+			line-height: 50px;/*increase or decrease the line height of the flex items*/
+			background-color: tomato;
+			text-align: center;
+			color: white;
+		}
+		.main1{
+			display: flex;/* display will be seen in flex*/
+			height: 400px;
+			flex-wrap: wrap;/*flex items will be wrap*/
+			background-color: grey;/*background color for flex board*/
+			justify-content: center;/*this will align the flex item to the center*/
+			justify-content: space-between;/*this will create the space beteen the items*/
+			align-items: flex-start;
+		}
+
+		div .sub1{
+			width: 100px;
+			margin: 10px;
+			padding: 20px;
+			line-height: 30px;/*increase or decrease the line height of the flex items*/
+			background-color: tomato;
+			text-align: center;
+			color: white;
+		}
+
+		.head{
+			display: flex;
+			flex-wrap: wrap;
+			background-color: pink;
+			padding: 0 5px;
+		}
+			
+		* {
+			box-sizing: border-box;
+		}
+
+		.subhead{
+			flex: 25%;
+			max-width: 25%;
+			padding: 4px;
+			margin: 0px;
+		}
+
+		.subhead img{
+			margin-top: 8px;
+			vertical-align: middle;
+			object-fit: cover;
+			
+		}
+
+		@media only screen and (max-width: 900px){
+			.subhead{
+				width: 25%;
+				flex: 25%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<h1>basic use of flex</h1>
+	<div class="main">
+		<div class="sub"  style="flex-grow: 1">This</div>
+		<div class="sub" style="flex-grow: 10">is</div><!-- this will increase the size if is 8times faster-->
+		<div class="sub" style="flex-grow: 4">flex</div>
+		
+	</div>
+
+	<h2>Flex order(without flex-order proerty but with align-self property)</h2>
+	<div class="main1">
+		<div class="sub1" style="background-color: skyblue;">1</div>
+		<div class="sub1" style="align-self: center;">2</div><!-- this will align the respective item to the center-->
+		<div class="sub1" style="background-color: skyblue; align-self: flex-end;">3</div>
+
+
+
+
+
+
+
+
+		</div>
+		
+	</div>
+    
+	<h2>Flex order(with flex-order proerty)</h2>
+	<div class="main1" style="height: 100px;">
+		<div class="sub1" style="order: 2">1</div> <!-- place 1 in second position-->
+		<div class="sub1" style="order: 3">2</div>
+		<div class="sub1" style="order: 1">3</div>
+		
+	</div>
+
+	<h3>photos in a flex</h3>
+	<div class="head">
+		<div class="subhead"><img src="photos\18600678_1838984283089833_1522209201_n.jpg" style="width: 100%"></div>
+		<div class="subhead"><img src="photos\18740709_10155819005660110_2669239843844129324_n.jpg" style="width: 100%"></div>
+		<div class="subhead"><img src="photos\IMG_20170715_093107.jpg"  style="width: 100%"></div>
+		<div class="subhead"><img src="photos\picture010.jpg" style="width: 100%"></div>
+
+	</div>
+
+
+</body>
+</html>
